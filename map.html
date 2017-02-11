@@ -283,8 +283,15 @@
         var marker2 = new google.maps.Marker({
           position: myLatLng2,
           map: map,
-          title: 'Springer Mountain'
+          title: 'Mount Katahdin'
         });
+        var infowindow2 = new google.maps.InfoWindow({
+          content: 'Northern Terminus'
+           });
+        marker2.addListener('click',function() {
+          infowindow2.open(map,marker2);
+          });
+        
       }
       
       
