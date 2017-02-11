@@ -21,12 +21,13 @@
   <body>
     <div id="map"></div>
     <script>
-      var map;
+      
       function initMap() {
+       var map;
        var myLatLng = {lat:34.6263416 , lng:-84.193571};
        var myLatLng2 = { lat:45.90446, lng: -68.921726};
       
-        var map = new google.maps.Map(document.getElementById('map'), {
+       map = new google.maps.Map(document.getElementById('map'),{ 
          
           zoom: 4,
           center: myLatLng2,
@@ -248,7 +249,7 @@
 ]
         
         
-        });
+       })
         var markers = [
         ['Springer Mountian, Georgia', myLatLng],
         ['Maine, Maine', myLatLng2]
@@ -271,7 +272,7 @@
     // Loop through our array of markers & place each one on the map  
     for( i = 0; i < markers.length; i++ ) {
         var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-        bounds.extend(position);
+        
         marker = new google.maps.Marker({
             position: position,
             map: map,
