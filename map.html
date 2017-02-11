@@ -270,7 +270,9 @@
           
          content: contentString 
         });
-
+        var infowindowmaine= new google.maps.InfoWindow({
+          content: "yes its true"
+        });
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
@@ -284,6 +286,9 @@
           postition: myLatLng2,
           map: map,
           title: 'Maine'
+        });
+         markermaine.addListener('click', function() {
+          infowindowmaine.open(map, markermaine);
         });
       }
       
