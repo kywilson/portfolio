@@ -26,19 +26,18 @@
        var myLatLng = {lat:34.6263416 , lng:-84.193571};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 6,
           center: myLatLng
         });
 
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Hello World!'
-        });
+          title: 'Hello World!',
+          
+       
         
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat:34.6263416, lng: -84.193571},
-          zoom: 6,
+       
          styles:
      [
   {
