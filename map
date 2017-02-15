@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      
+      function initMap() {
+       var map;
+       var myLatLng = {lat:34.6263416 , lng:-84.193571};
+       var myLatLng2 = { lat:45.90446, lng: -68.921726};
+      
+       map = new google.maps.Map(document.getElementById('map'),{ 
+         
+          zoom: 5,
+          center: { lat: 39.942050, lng: -75.164048},
+          
