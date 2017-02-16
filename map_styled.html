@@ -266,7 +266,21 @@
             '</div>'+
             '</div>';
 
+            var img2 = '<http://images.summitpost.org/original/74773.jpg>'
+            var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Mount Katahdin</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Mount Katahdin</b> is the Northern Terminus of the Appalachian Trail.</p>'+
+            '<p>Wikipedia: Mount Katahdin, <a href="https://en.wikipedia.org/wiki/Mount_Katahdin">'+
+            'https://en.wikipedia.org/wiki/Springer_Mountain</a>'+ 
+             '</p>' + "<div style='float:right'><img src='http://images.summitpost.org/original/74773.jpg'></div>"
             
+
+            '</div>'+
+            '</div>';
+  
 
         var infowindow = new google.maps.InfoWindow({
           
@@ -292,7 +306,7 @@
           title: 'Harpers Ferry'
         });
         var infowindow2 = new google.maps.InfoWindow({
-          content: 'Northern Terminus'
+          content: contentString2
            });
         marker2.addListener('click',function() {
           infowindow2.open(map,marker2);
