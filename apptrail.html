@@ -1,1 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      
+      function initMap() {
+       var map;
+       var myLatLng = {lat:34.6263416 , lng:-84.193571};
+       var myLatLng2 = { lat:45.90446, lng: -68.921726};
+       var myLatLng3 = { lat:39.326139, lng:-77.7488435};
+       
+        map = new google.maps.Map(document.getElementById('map'),{ 
+         
+          zoom: 5,
+          center: { lat: 39.942050, lng: -75.164048},
+          styles: 
+          [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ebe3cd"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#523735"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#c9b2a6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#dcd2be"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#ae9e90"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#93817c"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#a5b076"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#447530"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#fdfcf8"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f8c967"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#e9bc62"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e98d58"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#db8555"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#806b63"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#8f7d77"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#ebe3cd"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#b9d3c2"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#92998d"
+      }
+    ]
+  }
+]
+        
+        
+       });
+        var img = '<http://2wzlm92dvpgd3a560m9ue6tx.wpengine.netdna-cdn.com/images/Springer_Mountain_Loop/3-springer-mountain-loop-appalachian-trail.jpg>'
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Springer Mountain</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Springer Mountain</b> is the southern terminus of the Appalachian Trail.</p>'+
+            '<p>Wikipedia: Springer Mountain, <a href="https://en.wikipedia.org/wiki/Springer_Mountain">'+
+            'https://en.wikipedia.org/wiki/Springer_Mountain</a>'+ 
+             '</p>' + "<div style='float:right'><img src='http://2wzlm92dvpgd3a560m9ue6tx.wpengine.netdna-cdn.com/images/Springer_Mountain_Loop/3-springer-mountain-loop-appalachian-trail.jpg'></div>"
+            
+            '</div>'+
+            '</div>';
+            var img2 = '<http://images.summitpost.org/original/74773.jpg>'
+            var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Mount Katahdin</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Mount Katahdin</b> is the Northern Terminus of the Appalachian Trail.</p>'+
+            '<p>Wikipedia: Mount Katahdin, <a href="https://en.wikipedia.org/wiki/Mount_Katahdin">'+
+            'https://en.wikipedia.org/wiki/Mount_Katahdin</a>'+ 
+             '</p>' + "<div style='float:right'><img src='http://images.summitpost.org/original/74773.jpg'></div>"
+            
+            '</div>'+
+            '</div>';
+  
+        var infowindow = new google.maps.InfoWindow({
+          
+         content: contentString 
+       
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Springer Mountain'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        var marker2 = new google.maps.Marker({
+          position: myLatLng2,
+          map: map,
+          title: 'Mount Katahdin'
+        });
+        var marker3 = new google.maps.Marker({
+          position: myLatLng3,
+          map: map,
+          title: 'Harpers Ferry'
+        });
+        var infowindow2 = new google.maps.InfoWindow({
+          content: contentString2
+           });
+        marker2.addListener('click',function() {
+          infowindow2.open(map,marker2);
+          });
+        var infowindow3 = new google.maps.InfoWindow({
+          content: 'Harpers Ferry'
+        });
+        marker3.addListener('click',function() { 
+          infowindow3.open(map,marker3);
+        });
+                       
+        
+      }
+      
+      
+        
+       
+         
+        
+        
+         
+     </script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVrSnL05p6Zyh-w080_PPHqjtjsXj4tXI&callback=initMap"
+    async defer></script>
+    
 
+   
+  </body>
+</html>
