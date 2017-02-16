@@ -26,8 +26,9 @@
        var map;
        var myLatLng = {lat:34.6263416 , lng:-84.193571};
        var myLatLng2 = { lat:45.90446, lng: -68.921726};
-      
-       map = new google.maps.Map(document.getElementById('map'),{ 
+       var myLatLng3 = { lat:43.1999800, lng: -91.1501300};
+       
+        map = new google.maps.Map(document.getElementById('map'),{ 
          
           zoom: 5,
           center: { lat: 39.942050, lng: -75.164048},
@@ -285,12 +286,24 @@
           map: map,
           title: 'Mount Katahdin'
         });
+        var marker3 = new google.maps.Marker({
+          position: myLatLng3,
+          map: map,
+          title: 'Harpers Ferry'
+        });
         var infowindow2 = new google.maps.InfoWindow({
           content: 'Northern Terminus'
            });
         marker2.addListener('click',function() {
           infowindow2.open(map,marker2);
           });
+        var infowindow3 = new google.maps.InfoWindow({
+          content: 'Harpers Ferry'
+        });
+        marker3.addListener('click',function() { 
+          infowindow3.open(map,marker3);
+        });
+                       
         
       }
       
