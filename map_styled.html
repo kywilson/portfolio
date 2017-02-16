@@ -251,75 +251,9 @@
         
         
        });
-        var img = '<http://2wzlm92dvpgd3a560m9ue6tx.wpengine.netdna-cdn.com/images/Springer_Mountain_Loop/3-springer-mountain-loop-appalachian-trail.jpg>'
-        var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Springer Mountain</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Springer Mountain</b> is the southern terminus of the Appalachian Trail.</p>'+
-            '<p>Wikipedia: Springer Mountain, <a href="https://en.wikipedia.org/wiki/Springer_Mountain">'+
-            'https://en.wikipedia.org/wiki/Springer_Mountain</a>'+ 
-             '</p>' + "<div style='float:right'><img src='http://2wzlm92dvpgd3a560m9ue6tx.wpengine.netdna-cdn.com/images/Springer_Mountain_Loop/3-springer-mountain-loop-appalachian-trail.jpg'></div>"
-            
-
-            '</div>'+
-            '</div>';
-
-            var img2 = '<http://images.summitpost.org/original/74773.jpg>'
-            var contentString2 = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Mount Katahdin</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Mount Katahdin</b> is the Northern Terminus of the Appalachian Trail.</p>'+
-            '<p>Wikipedia: Mount Katahdin, <a href="https://en.wikipedia.org/wiki/Mount_Katahdin">'+
-            'https://en.wikipedia.org/wiki/Mount_Katahdin</a>'+ 
-             '</p>' + "<div style='float:right'><img src='http://images.summitpost.org/original/74773.jpg'></div>"
-            
-
-            '</div>'+
-            '</div>';
-  
-
-        var infowindow = new google.maps.InfoWindow({
-          
-         content: contentString 
-       
-        });
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Springer Mountain'
-        });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-        var marker2 = new google.maps.Marker({
-          position: myLatLng2,
-          map: map,
-          title: 'Mount Katahdin'
-        });
-        var marker3 = new google.maps.Marker({
-          position: myLatLng3,
-          map: map,
-          title: 'Harpers Ferry'
-        });
-        var infowindow2 = new google.maps.InfoWindow({
-          content: contentString2
-           });
-        marker2.addListener('click',function() {
-          infowindow2.open(map,marker2);
-          });
-        var infowindow3 = new google.maps.InfoWindow({
-          content: 'Harpers Ferry'
-        });
-        marker3.addListener('click',function() { 
-          infowindow3.open(map,marker3);
-        });
-                       
         
-      }
+        
+   
       
       
         
