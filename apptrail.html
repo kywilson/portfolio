@@ -349,7 +349,7 @@
           infowindow3.open(map,marker3);
         });
 	       // Define the LatLng coordinates for the polygon's path.
-        var triangleCoords = [
+        var hundredmilewildCoords = [
           {lat: 45.8352466, lng: -68.9693209},
           {lat: 45.293244, lng: -69.501188},
 		{lat: 45.864886, lng: -69.203789},
@@ -359,15 +359,15 @@
         ];
 
         // Construct the polygon.
-        var bermudaTriangle = new google.maps.Polygon({
-          paths: triangleCoords,
+        var hundredMile = new google.maps.Polygon({
+          paths: hundredmilewildCoords,
           strokeColor: '#FF0000',
           strokeOpacity: 0.8,
           strokeWeight: 2,
-          fillColor: '#FF0000',
+          fillColor: "light green",
           fillOpacity: 0.35
         });
-        bermudaTriangle.setMap(map);
+        hundredMile.setMap(map);
                        
         
       }
