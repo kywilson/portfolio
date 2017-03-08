@@ -343,7 +343,7 @@
           infowindow2.open(map,marker2);
           });
         var infowindow3 = new google.maps.InfoWindow({
-          content: 'Harpers Ferry'
+          content: 'Harpers Ferry is considered the Half Way Point of the Appalachian Trail'
         });
         marker3.addListener('click',function() { 
           infowindow3.open(map,marker3);
@@ -361,13 +361,19 @@
         // Construct the polygon.
         var hundredMile = new google.maps.Polygon({
           paths: hundredmilewildCoords,
-          strokeColor: '#FF0000',
+          strokeColor: 'light green',
           strokeOpacity: 0.8,
           strokeWeight: 2,
           fillColor: "light green",
           fillOpacity: 0.35,
-		title: "100 Mile Wilderness"
+		title: '100 Mile Wilderness'
         });
+	      
+	    var infowindow4 = new google.maps.InfoWindow({
+          content: '100 Mile Wilderness'
+        });
+        hundredMile.addListener('click',function() { 
+          infowindow4.open(map,hundredMile);   
         hundredMile.setMap(map);
                        
         
