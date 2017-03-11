@@ -384,7 +384,24 @@
         }); 
 	      
 	 hundredMile.setMap(map);
-      
+	  });     
+	      
+      var flightPlanCoordinates = [
+          {lat:34.6263416 , lng:-84.193571 },
+          {lat:45.90446 , lng:-68.921726 },
+          {lat:39.326139, lng:-77.7488435 },
+         
+        ];
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+      }
 	                  
         
       }
