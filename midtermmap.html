@@ -29,7 +29,15 @@
           center: {lat: 36.060574 , lng:-107.961692 },
           zoom: 18
         });
-        
+        var contentString= "This is Peublo Bonita"
+        var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+        var marker = new google.maps.Marker({
+         position: {lat: 36.060574 , lng:-107.961692 },
+         map: map,
+        title: 'Puebla Bonita'
+  });
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVrSnL05p6Zyh-w080_PPHqjtjsXj4tXI&callback=initMap"
