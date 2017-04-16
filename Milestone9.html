@@ -17,7 +17,7 @@
         ],
         target: 'map',
         view: new ol.View({
-          center: [47.6077,-122.3421],
+          center: ol.proj.fromLonLat([-122.340069, 47.606209]),
           zoom: 4
         })
       });
