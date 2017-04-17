@@ -12,17 +12,11 @@
        var layers = [
         new ol.layer.Tile({
           source: new ol.source.OSM()
-        
-        })
+         })
       ];
+      
       var map = new ol.Map({
-        layers: [ 
-          new ol.layer.Tile({
-            source: new ol.source.OSM(),
-           
-          })
-          
-        ],
+        layers: layers, 
         target: 'map',
         view: new ol.View({
           center: ol.proj.fromLonLat([-122.340069, 47.606209]),
