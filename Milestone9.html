@@ -24,19 +24,9 @@
          
         })
       ];
-      // create a vector source that loads a GeoJSON file
-      var vectorSource = new ol.source.GeoJSON({
-        projection: 'EPSG:3857',
-        url: '../assets/data/countries.geojson'
-      });
-
-      // a vector layer to render the source
-      var vectorLayer = new ol.layer.Vector({
-        source: vectorSource
-      });
-          
+      
       var map = new ol.Map({
-        layers: [layers,vectorLayer],
+        layers: [layers],
         target: 'map',
         view: new ol.View({
           center: ol.proj.fromLonLat([-122.340069, 47.606209]),
