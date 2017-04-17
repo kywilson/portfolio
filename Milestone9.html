@@ -18,7 +18,9 @@
           source: new ol.source.TileWMS({
             url: 'https://ahocevar.com/geoserver/wms',
             params: {'LAYERS': 'topp:states', 'TILED': true},
-            serverType: 'geoserver'
+            serverType: 'geoserver',
+            transperancy: 60
+            
           })
         })
       ];
