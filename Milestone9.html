@@ -19,13 +19,13 @@
             url: 'https://ahocevar.com/geoserver/wms',
             params: {'LAYERS': 'topp:states', 'TILED': true},
             serverType: 'geoserver',
-            
+            setOpacity(0.5),
             
           }),
-           opacity: 1.0
+         
         })
       ];
-      
+          
       var map = new ol.Map({
         layers: layers, 
         target: 'map',
@@ -34,6 +34,7 @@
           zoom: 8
         })
       });
+      
     </script>
   </body>
 </html>
