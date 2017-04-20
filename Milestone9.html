@@ -9,7 +9,7 @@
   <body>
     <div id="map" class="map"></div>
     <script>
-       var layers = [
+       var layer1 = [
         new ol.layer.Tile({
           source: new ol.source.OSM()
          }),
@@ -19,7 +19,7 @@
        
       
       var map = new ol.Map({
-        layers: layers,
+        layers: layer1,
         target: 'map',
         view: new ol.View({
           center: ol.proj.fromLonLat([-122.340069, 47.606209]),
