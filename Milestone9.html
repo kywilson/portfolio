@@ -13,27 +13,13 @@
         new ol.layer.Tile({
           source: new ol.source.OSM()
          }),
+	],
          
          
        
-      ];
-      var basemap_USGS = new ol.layer.Tile({
-	source: new ol.source.TileWMS({
-	url: 'https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WmsServer?',
-	  params: {
-		LAYERS: 0,
-		FORMAT: 'image/png',
-		TRANSPARENT: true
-	  },
-	  attributions: [
-	    new ol.Attribution({
-		  html: 'Data provided by the <a href="http://basemap.nationalmap.gov">National Map</a>.'
-		})
-	  ]
-	})
-})
+      
       var map = new ol.Map({
-        layers: layers,basemap_USGS,
+        layers: layers,
         target: 'map',
         view: new ol.View({
           center: ol.proj.fromLonLat([-122.340069, 47.606209]),
